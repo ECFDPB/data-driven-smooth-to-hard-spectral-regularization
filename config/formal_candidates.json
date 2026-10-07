@@ -1,0 +1,3731 @@
+{
+  "generated_at": "2026-10-03T11:45:01.673993+00:00",
+  "source": [
+    "single_image_evaluation\\outputs\\pilot\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round1\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round2\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round3\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round4\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round5_retry\\candidate_results.jsonl",
+    "single_image_evaluation\\outputs\\pilot_boundary_round6\\candidate_results.jsonl"
+  ],
+  "pilot_cases": [
+    "fs_0001_1_5T",
+    "fs_0004_1_5T",
+    "fs_0013_3T",
+    "fs_0016_3T"
+  ],
+  "candidate_count_policy": {
+    "fixed_count": null,
+    "method_fixed_counts": {
+      "proposed": 6,
+      "soft": 4,
+      "hard": 4,
+      "l_plus_s": 6
+    },
+    "minimum": 4,
+    "maximum": 10,
+    "mean_normalized_regret_band": 0.05
+  },
+  "selection_rule": "separate per-condition grids: protect per-case winners, retain near-best mean normalized validation regret, then enforce small adaptive bounds",
+  "conditions": {
+    "R4_snr0": {
+      "proposed": [
+        {
+          "alpha": 0.6,
+          "a": 2.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.15,
+          "a": 1.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.075,
+          "a": 1.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.6,
+          "a": 2.0,
+          "c": 1.05
+        },
+        {
+          "alpha": 0.3,
+          "a": 1.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.15,
+          "a": 0.5,
+          "c": 0.55
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.004
+        },
+        {
+          "q": 0.008
+        },
+        {
+          "q": 0.184
+        },
+        {
+          "q": 0.12
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.09
+        },
+        {
+          "q": 0.42
+        },
+        {
+          "q": 0.54
+        },
+        {
+          "q": 0.72
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.005359375,
+          "q_S": 0.12
+        },
+        {
+          "q_L": 0.012,
+          "q_S": 0.048
+        },
+        {
+          "q_L": 0.026,
+          "q_S": 0.028
+        },
+        {
+          "q_L": 0.044,
+          "q_S": 0.014
+        },
+        {
+          "q_L": 0.02,
+          "q_S": 0.04
+        },
+        {
+          "q_L": 0.016,
+          "q_S": 0.032
+        }
+      ]
+    },
+    "R4_snr10": {
+      "proposed": [
+        {
+          "alpha": 0.0125,
+          "a": 2.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.025,
+          "a": 2.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.05,
+          "a": 2.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.025,
+          "a": 4.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.1,
+          "a": 2.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.025,
+          "a": 1.0,
+          "c": 0.35
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.005
+        },
+        {
+          "q": 0.01
+        },
+        {
+          "q": 0.05
+        },
+        {
+          "q": 0.075
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.198
+        },
+        {
+          "q": 0.308
+        },
+        {
+          "q": 0.396
+        },
+        {
+          "q": 0.528
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0042,
+          "q_S": 0.075
+        },
+        {
+          "q_L": 0.0156,
+          "q_S": 0.0175
+        },
+        {
+          "q_L": 0.0204,
+          "q_S": 0.0125
+        },
+        {
+          "q_L": 0.0042,
+          "q_S": 0.125
+        },
+        {
+          "q_L": 0.012,
+          "q_S": 0.025
+        },
+        {
+          "q_L": 0.0096,
+          "q_S": 0.02
+        }
+      ]
+    },
+    "R4_snr20": {
+      "proposed": [
+        {
+          "alpha": 0.03,
+          "a": 8.0,
+          "c": 0.15
+        },
+        {
+          "alpha": 0.03,
+          "a": 8.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.03,
+          "a": 16.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.015,
+          "a": 16.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.06,
+          "a": 16.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.06,
+          "a": 4.0,
+          "c": 0.35
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.005
+        },
+        {
+          "q": 0.0175
+        },
+        {
+          "q": 0.01
+        },
+        {
+          "q": 0.025
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.165
+        },
+        {
+          "q": 0.27
+        },
+        {
+          "q": 0.36
+        },
+        {
+          "q": 0.48
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0056,
+          "q_S": 0.0096
+        },
+        {
+          "q_L": 0.0119,
+          "q_S": 0.006
+        },
+        {
+          "q_L": 0.0091,
+          "q_S": 0.0084
+        },
+        {
+          "q_L": 0.007,
+          "q_S": 0.012
+        },
+        {
+          "q_L": 0.0042,
+          "q_S": 0.0144
+        },
+        {
+          "q_L": 0.0028,
+          "q_S": 0.0216
+        }
+      ]
+    },
+    "R4_snr30": {
+      "proposed": [
+        {
+          "alpha": 0.01,
+          "a": 16.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.01,
+          "a": 512.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.02,
+          "a": 512.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.02,
+          "a": 256.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.02,
+          "a": 128.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.02,
+          "a": 64.0,
+          "c": 0.55
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.007
+        },
+        {
+          "q": 0.01
+        },
+        {
+          "q": 0.015
+        },
+        {
+          "q": 0.023
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.18
+        },
+        {
+          "q": 0.32
+        },
+        {
+          "q": 0.24
+        },
+        {
+          "q": 0.42666667
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.004,
+          "q_S": 0.006
+        },
+        {
+          "q_L": 0.0068,
+          "q_S": 0.003
+        },
+        {
+          "q_L": 0.0052,
+          "q_S": 0.0042
+        },
+        {
+          "q_L": 0.0032,
+          "q_S": 0.0048
+        },
+        {
+          "q_L": 0.0088,
+          "q_S": 0.0021
+        },
+        {
+          "q_L": 0.0024,
+          "q_S": 0.0072
+        }
+      ]
+    },
+    "R6_snr0": {
+      "proposed": [
+        {
+          "alpha": 0.2625,
+          "a": 1.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 1.05,
+          "a": 2.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.525,
+          "a": 1.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.2625,
+          "a": 0.5,
+          "c": 0.55
+        },
+        {
+          "alpha": 2.1,
+          "a": 2.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.13125,
+          "a": 1.0,
+          "c": 0.35
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.24340912
+        },
+        {
+          "q": 0.15874508
+        },
+        {
+          "q": 0.10583005
+        },
+        {
+          "q": 0.074081037
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.1094727
+        },
+        {
+          "q": 0.3284181
+        },
+        {
+          "q": 0.1824545
+        },
+        {
+          "q": 1.1677088
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0047496039,
+          "q_S": 0.1459636
+        },
+        {
+          "q_L": 0.0081026136,
+          "q_S": 0.1459636
+        },
+        {
+          "q_L": 0.026457513,
+          "q_S": 0.048654533
+        },
+        {
+          "q_L": 0.044977772,
+          "q_S": 0.024327266
+        },
+        {
+          "q_L": 0.02116601,
+          "q_S": 0.038923626
+        },
+        {
+          "q_L": 0.015874508,
+          "q_S": 0.05838544
+        }
+      ]
+    },
+    "R6_snr10": {
+      "proposed": [
+        {
+          "alpha": 0.021875,
+          "a": 2.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.04375,
+          "a": 2.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.04375,
+          "a": 1.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.0875,
+          "a": 2.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.35,
+          "a": 4.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.35,
+          "a": 4.0,
+          "c": 1.05
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.066143783
+        },
+        {
+          "q": 0.013228757
+        },
+        {
+          "q": 0.046300648
+        },
+        {
+          "q": 0.026457513
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.18731995
+        },
+        {
+          "q": 0.29435992
+        },
+        {
+          "q": 0.24083994
+        },
+        {
+          "q": 0.3746399
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0055560778,
+          "q_S": 0.091227249
+        },
+        {
+          "q_L": 0.02063686,
+          "q_S": 0.021286358
+        },
+        {
+          "q_L": 0.015874508,
+          "q_S": 0.030409083
+        },
+        {
+          "q_L": 0.026986663,
+          "q_S": 0.015204542
+        },
+        {
+          "q_L": 0.0055560778,
+          "q_S": 0.15204541
+        },
+        {
+          "q_L": 0.012699606,
+          "q_S": 0.024327266
+        }
+      ]
+    },
+    "R6_snr20": {
+      "proposed": [
+        {
+          "alpha": 0.0065625,
+          "a": 8.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.013125,
+          "a": 8.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.0525,
+          "a": 8.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.02625,
+          "a": 16.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.0525,
+          "a": 16.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.02625,
+          "a": 4.0,
+          "c": 0.55
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.0066143783
+        },
+        {
+          "q": 0.023150324
+        },
+        {
+          "q": 0.013228757
+        },
+        {
+          "q": 0.033071891
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.16420905
+        },
+        {
+          "q": 0.2554363
+        },
+        {
+          "q": 0.20069995
+        },
+        {
+          "q": 0.3284181
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0074081037,
+          "q_S": 0.011677088
+        },
+        {
+          "q_L": 0.012038168,
+          "q_S": 0.010217452
+        },
+        {
+          "q_L": 0.0092601296,
+          "q_S": 0.01459636
+        },
+        {
+          "q_L": 0.01574222,
+          "q_S": 0.0072981799
+        },
+        {
+          "q_L": 0.0055560778,
+          "q_S": 0.017515632
+        },
+        {
+          "q_L": 0.0037040518,
+          "q_S": 0.026273448
+        }
+      ]
+    },
+    "R6_snr30": {
+      "proposed": [
+        {
+          "alpha": 0.0175,
+          "a": 16.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.0175,
+          "a": 512.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.00875,
+          "a": 32.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.0175,
+          "a": 256.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.0175,
+          "a": 128.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.0175,
+          "a": 64.0,
+          "c": 0.55
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.0052915026
+        },
+        {
+          "q": 0.013228757
+        },
+        {
+          "q": 0.0092601296
+        },
+        {
+          "q": 0.019843135
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.13379997
+        },
+        {
+          "q": 0.2919272
+        },
+        {
+          "q": 0.2189454
+        },
+        {
+          "q": 0.38923627
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0089955545,
+          "q_S": 0.00364909
+        },
+        {
+          "q_L": 0.0068789534,
+          "q_S": 0.005108726
+        },
+        {
+          "q_L": 0.0052915026,
+          "q_S": 0.0072981799
+        },
+        {
+          "q_L": 0.0042332021,
+          "q_S": 0.005838544
+        },
+        {
+          "q_L": 0.011641306,
+          "q_S": 0.002554363
+        },
+        {
+          "q_L": 0.0031749016,
+          "q_S": 0.0087578159
+        }
+      ]
+    },
+    "R8_snr0": {
+      "proposed": [
+        {
+          "alpha": 1.8,
+          "a": 1.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.45,
+          "a": 1.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.45,
+          "a": 0.5,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.9,
+          "a": 1.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 1.8,
+          "a": 0.5,
+          "c": 0.35
+        },
+        {
+          "alpha": 1.8,
+          "a": 2.0,
+          "c": 0.8
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.2078461
+        },
+        {
+          "q": 0.13856406
+        },
+        {
+          "q": 0.096994845
+        },
+        {
+          "q": 0.055425626
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.13220106
+        },
+        {
+          "q": 1.0576085
+        },
+        {
+          "q": 1.4101447
+        },
+        {
+          "q": 0.22033511
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.006218692,
+          "q_S": 0.17626808
+        },
+        {
+          "q_L": 0.027712813,
+          "q_S": 0.047004823
+        },
+        {
+          "q_L": 0.034641016,
+          "q_S": 0.058756028
+        },
+        {
+          "q_L": 0.058889727,
+          "q_S": 0.029378014
+        },
+        {
+          "q_L": 0.02078461,
+          "q_S": 0.070507234
+        },
+        {
+          "q_L": 0.013856406,
+          "q_S": 0.10576085
+        }
+      ]
+    },
+    "R8_snr10": {
+      "proposed": [
+        {
+          "alpha": 0.6,
+          "a": 4.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.15,
+          "a": 2.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.075,
+          "a": 2.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 1.2,
+          "a": 8.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 1.2,
+          "a": 4.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.6,
+          "a": 2.0,
+          "c": 0.35
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.060621778
+        },
+        {
+          "q": 0.034641016
+        },
+        {
+          "q": 0.017320508
+        },
+        {
+          "q": 0.08660254
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.16157908
+        },
+        {
+          "q": 0.29084234
+        },
+        {
+          "q": 0.22621071
+        },
+        {
+          "q": 0.35547397
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0083138439,
+          "q_S": 0.066100532
+        },
+        {
+          "q_L": 0.027019993,
+          "q_S": 0.025705762
+        },
+        {
+          "q_L": 0.02078461,
+          "q_S": 0.036722518
+        },
+        {
+          "q_L": 0.035333836,
+          "q_S": 0.018361259
+        },
+        {
+          "q_L": 0.016627688,
+          "q_S": 0.029378014
+        },
+        {
+          "q_L": 0.012470766,
+          "q_S": 0.044067021
+        }
+      ]
+    },
+    "R8_snr20": {
+      "proposed": [
+        {
+          "alpha": 0.01125,
+          "a": 8.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.0225,
+          "a": 8.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.09,
+          "a": 4.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.045,
+          "a": 4.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.09,
+          "a": 8.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.045,
+          "a": 16.0,
+          "c": 0.8
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.017320508
+        },
+        {
+          "q": 0.030310889
+        },
+        {
+          "q": 0.008660254
+        },
+        {
+          "q": 0.04330127
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.15423457
+        },
+        {
+          "q": 0.30846915
+        },
+        {
+          "q": 0.1983016
+        },
+        {
+          "q": 0.24236862
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0096994845,
+          "q_S": 0.014101447
+        },
+        {
+          "q_L": 0.015761662,
+          "q_S": 0.012338766
+        },
+        {
+          "q_L": 0.012124356,
+          "q_S": 0.017626808
+        },
+        {
+          "q_L": 0.020611405,
+          "q_S": 0.0088134042
+        },
+        {
+          "q_L": 0.0072746134,
+          "q_S": 0.02115217
+        },
+        {
+          "q_L": 0.0048497423,
+          "q_S": 0.031728255
+        }
+      ]
+    },
+    "R8_snr30": {
+      "proposed": [
+        {
+          "alpha": 0.03,
+          "a": 16.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.015,
+          "a": 32.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.015,
+          "a": 64.0,
+          "c": 0.8
+        },
+        {
+          "alpha": 0.03,
+          "a": 32.0,
+          "c": 0.55
+        },
+        {
+          "alpha": 0.06,
+          "a": 8.0,
+          "c": 0.35
+        },
+        {
+          "alpha": 0.015,
+          "a": 32.0,
+          "c": 1.05
+        }
+      ],
+      "soft": [
+        {
+          "q": 0.0069282032
+        },
+        {
+          "q": 0.012124356
+        },
+        {
+          "q": 0.017320508
+        },
+        {
+          "q": 0.025980762
+        }
+      ],
+      "hard": [
+        {
+          "q": 0.13220106
+        },
+        {
+          "q": 0.26440213
+        },
+        {
+          "q": 0.2056461
+        },
+        {
+          "q": 0.35253617
+        }
+      ],
+      "l_plus_s": [
+        {
+          "q_L": 0.0055425626,
+          "q_S": 0.0070507234
+        },
+        {
+          "q_L": 0.0090066642,
+          "q_S": 0.006169383
+        },
+        {
+          "q_L": 0.0069282032,
+          "q_S": 0.0088134042
+        },
+        {
+          "q_L": 0.011777945,
+          "q_S": 0.0044067021
+        },
+        {
+          "q_L": 0.0041569219,
+          "q_S": 0.010576085
+        },
+        {
+          "q_L": 0.0027712813,
+          "q_S": 0.015864128
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "R4_snr0": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.6,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.6,
+              "a": 2.0,
+              "c": 0.8
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 8.588394625036466e-05,
+            "max_normalized_regret": 0.00034353578500145865
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.15,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.15,
+              "a": 1.0,
+              "c": 0.55
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0010665897602195051,
+            "max_normalized_regret": 0.003281834411921203
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.075,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.075,
+              "a": 1.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.042030132597269565,
+            "max_normalized_regret": 0.053981698159586866
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.6,\"c\":1.05}",
+            "parameter": {
+              "alpha": 0.6,
+              "a": 2.0,
+              "c": 1.05
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06692854737271692,
+            "max_normalized_regret": 0.12202498249056459
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.3,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.3,
+              "a": 1.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0669715382176696,
+            "max_normalized_regret": 0.12855032753234896
+          },
+          {
+            "token": "{\"a\":0.5,\"alpha\":0.15,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.15,
+              "a": 0.5,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.09448336877230734,
+            "max_normalized_regret": 0.17760279056473438
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.004}",
+            "parameter": {
+              "q": 0.004
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.031324251374195755,
+            "max_normalized_regret": 0.07442491020655195
+          },
+          {
+            "token": "{\"q\":0.008}",
+            "parameter": {
+              "q": 0.008
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.006756132371725454,
+            "max_normalized_regret": 0.018767496848436593
+          },
+          {
+            "token": "{\"q\":0.184}",
+            "parameter": {
+              "q": 0.184
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.0006139747156290731,
+            "max_normalized_regret": 0.0021771776023056244
+          },
+          {
+            "token": "{\"q\":0.12}",
+            "parameter": {
+              "q": 0.12
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.000636054100969563,
+            "max_normalized_regret": 0.0022581408887922816
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.09}",
+            "parameter": {
+              "q": 0.09
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.09738181746644259,
+            "max_normalized_regret": 0.2591702413492212
+          },
+          {
+            "token": "{\"q\":0.42}",
+            "parameter": {
+              "q": 0.42
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.034268151762778365,
+            "max_normalized_regret": 0.088340744204497
+          },
+          {
+            "token": "{\"q\":0.54}",
+            "parameter": {
+              "q": 0.54
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.034268151762778365,
+            "max_normalized_regret": 0.088340744204497
+          },
+          {
+            "token": "{\"q\":0.72}",
+            "parameter": {
+              "q": 0.72
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.034268151762778365,
+            "max_normalized_regret": 0.088340744204497
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.005359375,\"q_S\":0.12}",
+            "parameter": {
+              "q_L": 0.005359375,
+              "q_S": 0.12
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.025588166840255333,
+            "max_normalized_regret": 0.07617649456285447
+          },
+          {
+            "token": "{\"q_L\":0.012,\"q_S\":0.048}",
+            "parameter": {
+              "q_L": 0.012,
+              "q_S": 0.048
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.010089515435871999,
+            "max_normalized_regret": 0.035504782068699114
+          },
+          {
+            "token": "{\"q_L\":0.026,\"q_S\":0.028}",
+            "parameter": {
+              "q_L": 0.026,
+              "q_S": 0.028
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.010303061513194545,
+            "max_normalized_regret": 0.030074024170091196
+          },
+          {
+            "token": "{\"q_L\":0.044,\"q_S\":0.014}",
+            "parameter": {
+              "q_L": 0.044,
+              "q_S": 0.014
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.22705111133145017,
+            "max_normalized_regret": 0.32343876196869803
+          },
+          {
+            "token": "{\"q_L\":0.02,\"q_S\":0.04}",
+            "parameter": {
+              "q_L": 0.02,
+              "q_S": 0.04
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.008650035232089182,
+            "max_normalized_regret": 0.03052346222416702
+          },
+          {
+            "token": "{\"q_L\":0.016,\"q_S\":0.032}",
+            "parameter": {
+              "q_L": 0.016,
+              "q_S": 0.032
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.00897554848619364,
+            "max_normalized_regret": 0.031710644643185404
+          }
+        ]
+      }
+    },
+    "R4_snr10": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.0125,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.0125,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.18522920847180147,
+            "max_normalized_regret": 0.46376011689018837
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.025,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.025,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.0063792612842208385,
+            "max_normalized_regret": 0.025517045136883354
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.05,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.05,
+              "a": 2.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.026606786399073157,
+            "max_normalized_regret": 0.04117481842069992
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.025,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.025,
+              "a": 4.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.03913318157037371,
+            "max_normalized_regret": 0.08534556730534715
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.1,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.1,
+              "a": 2.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.04646003918363295,
+            "max_normalized_regret": 0.06217961614550305
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.025,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.025,
+              "a": 1.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.05410406969473075,
+            "max_normalized_regret": 0.10947671393613256
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.005}",
+            "parameter": {
+              "q": 0.005
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.045573909655127476,
+            "max_normalized_regret": 0.11973161593716508
+          },
+          {
+            "token": "{\"q\":0.01}",
+            "parameter": {
+              "q": 0.01
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0028821506958937593,
+            "max_normalized_regret": 0.0047551135230317065
+          },
+          {
+            "token": "{\"q\":0.05}",
+            "parameter": {
+              "q": 0.05
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0011665644199770342,
+            "max_normalized_regret": 0.004221311667397476
+          },
+          {
+            "token": "{\"q\":0.075}",
+            "parameter": {
+              "q": 0.075
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0031855770863378208,
+            "max_normalized_regret": 0.007780739423208338
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.198}",
+            "parameter": {
+              "q": 0.198
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 1.8518262803414873,
+            "max_normalized_regret": 4.519485469475617
+          },
+          {
+            "token": "{\"q\":0.308}",
+            "parameter": {
+              "q": 0.308
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.396}",
+            "parameter": {
+              "q": 0.396
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.528}",
+            "parameter": {
+              "q": 0.528
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0042,\"q_S\":0.075}",
+            "parameter": {
+              "q_L": 0.0042,
+              "q_S": 0.075
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.08300292300362555,
+            "max_normalized_regret": 0.2117140707607934
+          },
+          {
+            "token": "{\"q_L\":0.0156,\"q_S\":0.0175}",
+            "parameter": {
+              "q_L": 0.0156,
+              "q_S": 0.0175
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.004608550632082931,
+            "max_normalized_regret": 0.014766772598551858
+          },
+          {
+            "token": "{\"q_L\":0.0204,\"q_S\":0.0125}",
+            "parameter": {
+              "q_L": 0.0204,
+              "q_S": 0.0125
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.08981828214517024,
+            "max_normalized_regret": 0.17942169482604164
+          },
+          {
+            "token": "{\"q_L\":0.0042,\"q_S\":0.125}",
+            "parameter": {
+              "q_L": 0.0042,
+              "q_S": 0.125
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.08300292300362555,
+            "max_normalized_regret": 0.2117140707607934
+          },
+          {
+            "token": "{\"q_L\":0.012,\"q_S\":0.025}",
+            "parameter": {
+              "q_L": 0.012,
+              "q_S": 0.025
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0037906768430387427,
+            "max_normalized_regret": 0.004502037474661602
+          },
+          {
+            "token": "{\"q_L\":0.0096,\"q_S\":0.02}",
+            "parameter": {
+              "q_L": 0.0096,
+              "q_S": 0.02
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.005311490715524614,
+            "max_normalized_regret": 0.008783029516129082
+          }
+        ]
+      }
+    },
+    "R4_snr20": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.03,\"c\":0.15}",
+            "parameter": {
+              "alpha": 0.03,
+              "a": 8.0,
+              "c": 0.15
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 11.074017829366019,
+            "max_normalized_regret": 28.641366632512437
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.03,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.03,
+              "a": 8.0,
+              "c": 0.35
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.012091069919598851,
+            "max_normalized_regret": 0.048364279678395405
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.03,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.03,
+              "a": 16.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.021248630657994483,
+            "max_normalized_regret": 0.053072572526309925
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.015,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.015,
+              "a": 16.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.023639537935983335,
+            "max_normalized_regret": 0.05260819982419229
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.06,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.06,
+              "a": 16.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.02970809527202789,
+            "max_normalized_regret": 0.0615210288570458
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.06,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.06,
+              "a": 4.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.03893940714979549,
+            "max_normalized_regret": 0.06825640223579166
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.005}",
+            "parameter": {
+              "q": 0.005
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.05170290445978348,
+            "max_normalized_regret": 0.11322159172359414
+          },
+          {
+            "token": "{\"q\":0.0175}",
+            "parameter": {
+              "q": 0.0175
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.00022943558617338766,
+            "max_normalized_regret": 0.0009177423446935506
+          },
+          {
+            "token": "{\"q\":0.01}",
+            "parameter": {
+              "q": 0.01
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0009432263191717638,
+            "max_normalized_regret": 0.0025356654918311516
+          },
+          {
+            "token": "{\"q\":0.025}",
+            "parameter": {
+              "q": 0.025
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0043650629460763035,
+            "max_normalized_regret": 0.011721719593730473
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.165}",
+            "parameter": {
+              "q": 0.165
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 10.766279062289698,
+            "max_normalized_regret": 31.381144104253416
+          },
+          {
+            "token": "{\"q\":0.27}",
+            "parameter": {
+              "q": 0.27
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.36}",
+            "parameter": {
+              "q": 0.36
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.48}",
+            "parameter": {
+              "q": 0.48
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0056,\"q_S\":0.0096}",
+            "parameter": {
+              "q_L": 0.0056,
+              "q_S": 0.0096
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.052762259240603626,
+            "max_normalized_regret": 0.10322925462623966
+          },
+          {
+            "token": "{\"q_L\":0.0119,\"q_S\":0.006}",
+            "parameter": {
+              "q_L": 0.0119,
+              "q_S": 0.006
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.15857252798054894,
+            "max_normalized_regret": 0.35839239236020903
+          },
+          {
+            "token": "{\"q_L\":0.0091,\"q_S\":0.0084}",
+            "parameter": {
+              "q_L": 0.0091,
+              "q_S": 0.0084
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.013898476777148006,
+            "max_normalized_regret": 0.03259808477126369
+          },
+          {
+            "token": "{\"q_L\":0.007,\"q_S\":0.012}",
+            "parameter": {
+              "q_L": 0.007,
+              "q_S": 0.012
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.033279377583918524,
+            "max_normalized_regret": 0.10072455988835172
+          },
+          {
+            "token": "{\"q_L\":0.0042,\"q_S\":0.0144}",
+            "parameter": {
+              "q_L": 0.0042,
+              "q_S": 0.0144
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.1664265157241855,
+            "max_normalized_regret": 0.33438577761461263
+          },
+          {
+            "token": "{\"q_L\":0.0028,\"q_S\":0.0216}",
+            "parameter": {
+              "q_L": 0.0028,
+              "q_S": 0.0216
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.8473514349339861,
+            "max_normalized_regret": 2.1858344145672257
+          }
+        ]
+      }
+    },
+    "R4_snr30": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.01,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.01,
+              "a": 16.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 3.871848085651979,
+            "max_normalized_regret": 13.08446295138196
+          },
+          {
+            "token": "{\"a\":512.0,\"alpha\":0.01,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.01,
+              "a": 512.0,
+              "c": 0.55
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.017803922631220548,
+            "max_normalized_regret": 0.062246646187003485
+          },
+          {
+            "token": "{\"a\":512.0,\"alpha\":0.02,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.02,
+              "a": 512.0,
+              "c": 0.55
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.008318871221170365,
+            "max_normalized_regret": 0.016080204150616728
+          },
+          {
+            "token": "{\"a\":256.0,\"alpha\":0.02,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.02,
+              "a": 256.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.008534965911576042,
+            "max_normalized_regret": 0.01629820068124488
+          },
+          {
+            "token": "{\"a\":128.0,\"alpha\":0.02,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.02,
+              "a": 128.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.009040521478492436,
+            "max_normalized_regret": 0.0168922160767373
+          },
+          {
+            "token": "{\"a\":64.0,\"alpha\":0.02,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.02,
+              "a": 64.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.010363586973317351,
+            "max_normalized_regret": 0.01828857014086749
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.007}",
+            "parameter": {
+              "q": 0.007
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.005166301951083585,
+            "max_normalized_regret": 0.020004993267942472
+          },
+          {
+            "token": "{\"q\":0.01}",
+            "parameter": {
+              "q": 0.01
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.0026552753166028675,
+            "max_normalized_regret": 0.007397965310956378
+          },
+          {
+            "token": "{\"q\":0.015}",
+            "parameter": {
+              "q": 0.015
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.04426647700960401,
+            "max_normalized_regret": 0.09790665823334699
+          },
+          {
+            "token": "{\"q\":0.023}",
+            "parameter": {
+              "q": 0.023
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.16785970408295697,
+            "max_normalized_regret": 0.34452018017827224
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.18}",
+            "parameter": {
+              "q": 0.18
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 28.334751253882335,
+            "max_normalized_regret": 97.0238745595735
+          },
+          {
+            "token": "{\"q\":0.32}",
+            "parameter": {
+              "q": 0.32
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.24}",
+            "parameter": {
+              "q": 0.24
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 6.771417032590917,
+            "max_normalized_regret": 27.0338312959404
+          },
+          {
+            "token": "{\"q\":0.42666667}",
+            "parameter": {
+              "q": 0.42666667
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.004,\"q_S\":0.006}",
+            "parameter": {
+              "q_L": 0.004,
+              "q_S": 0.006
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.2313714747080391,
+            "max_normalized_regret": 0.46474249638145504
+          },
+          {
+            "token": "{\"q_L\":0.0068,\"q_S\":0.003}",
+            "parameter": {
+              "q_L": 0.0068,
+              "q_S": 0.003
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.3168701013247409,
+            "max_normalized_regret": 0.8042297981511657
+          },
+          {
+            "token": "{\"q_L\":0.0052,\"q_S\":0.0042}",
+            "parameter": {
+              "q_L": 0.0052,
+              "q_S": 0.0042
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.007485822038260759,
+            "max_normalized_regret": 0.027185323363224656
+          },
+          {
+            "token": "{\"q_L\":0.0032,\"q_S\":0.0048}",
+            "parameter": {
+              "q_L": 0.0032,
+              "q_S": 0.0048
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.953084829342473,
+            "max_normalized_regret": 2.7301774219054966
+          },
+          {
+            "token": "{\"q_L\":0.0088,\"q_S\":0.0021}",
+            "parameter": {
+              "q_L": 0.0088,
+              "q_S": 0.0021
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 1.8404757309839168,
+            "max_normalized_regret": 4.813619370331341
+          },
+          {
+            "token": "{\"q_L\":0.0024,\"q_S\":0.0072}",
+            "parameter": {
+              "q_L": 0.0024,
+              "q_S": 0.0072
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 3.2139999528074683,
+            "max_normalized_regret": 9.420729310085784
+          }
+        ]
+      }
+    },
+    "R6_snr0": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.2625,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.2625,
+              "a": 1.0,
+              "c": 0.55
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":1.05,\"c\":0.8}",
+            "parameter": {
+              "alpha": 1.05,
+              "a": 2.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.050080430800236886,
+            "max_normalized_regret": 0.1231650117246399
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.525,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.525,
+              "a": 1.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06154110753549763,
+            "max_normalized_regret": 0.1433941216798289
+          },
+          {
+            "token": "{\"a\":0.5,\"alpha\":0.2625,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.2625,
+              "a": 0.5,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06399488818534954,
+            "max_normalized_regret": 0.147837219824549
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":2.1,\"c\":0.55}",
+            "parameter": {
+              "alpha": 2.1,
+              "a": 2.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.10614052406521945,
+            "max_normalized_regret": 0.25729878006330686
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.13125,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.13125,
+              "a": 1.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.1254922901444534,
+            "max_normalized_regret": 0.16614101035202955
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.24340912}",
+            "parameter": {
+              "q": 0.24340912
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.0009248153687427818,
+            "max_normalized_regret": 0.0036992614749711272
+          },
+          {
+            "token": "{\"q\":0.15874508}",
+            "parameter": {
+              "q": 0.15874508
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0017045039959163732,
+            "max_normalized_regret": 0.005391559384916533
+          },
+          {
+            "token": "{\"q\":0.10583005}",
+            "parameter": {
+              "q": 0.10583005
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.001706366350109234,
+            "max_normalized_regret": 0.005388859603762786
+          },
+          {
+            "token": "{\"q\":0.074081037}",
+            "parameter": {
+              "q": 0.074081037
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0017084672878510676,
+            "max_normalized_regret": 0.005384424249009978
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.1094727}",
+            "parameter": {
+              "q": 0.1094727
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.008240739635205607,
+            "max_normalized_regret": 0.03296295854082243
+          },
+          {
+            "token": "{\"q\":0.3284181}",
+            "parameter": {
+              "q": 0.3284181
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.31094263920169235,
+            "max_normalized_regret": 0.559432904375929
+          },
+          {
+            "token": "{\"q\":0.1824545}",
+            "parameter": {
+              "q": 0.1824545
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.008240739635205607,
+            "max_normalized_regret": 0.03296295854082243
+          },
+          {
+            "token": "{\"q\":1.1677088}",
+            "parameter": {
+              "q": 1.1677088
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.008240785063505895,
+            "max_normalized_regret": 0.03296295854082243
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0047496039,\"q_S\":0.1459636}",
+            "parameter": {
+              "q_L": 0.0047496039,
+              "q_S": 0.1459636
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.022046312785307387,
+            "max_normalized_regret": 0.04842785310073805
+          },
+          {
+            "token": "{\"q_L\":0.0081026136,\"q_S\":0.1459636}",
+            "parameter": {
+              "q_L": 0.0081026136,
+              "q_S": 0.1459636
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.01090744577622943,
+            "max_normalized_regret": 0.023001403945612786
+          },
+          {
+            "token": "{\"q_L\":0.026457513,\"q_S\":0.048654533}",
+            "parameter": {
+              "q_L": 0.026457513,
+              "q_S": 0.048654533
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.00528795892443551,
+            "max_normalized_regret": 0.015110023586258237
+          },
+          {
+            "token": "{\"q_L\":0.044977772,\"q_S\":0.024327266}",
+            "parameter": {
+              "q_L": 0.044977772,
+              "q_S": 0.024327266
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.1460962662690199,
+            "max_normalized_regret": 0.22169274976908215
+          },
+          {
+            "token": "{\"q_L\":0.02116601,\"q_S\":0.038923626}",
+            "parameter": {
+              "q_L": 0.02116601,
+              "q_S": 0.038923626
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.005445527902352032,
+            "max_normalized_regret": 0.015337013439755465
+          },
+          {
+            "token": "{\"q_L\":0.015874508,\"q_S\":0.05838544}",
+            "parameter": {
+              "q_L": 0.015874508,
+              "q_S": 0.05838544
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.005995163708622131,
+            "max_normalized_regret": 0.01610994696135104
+          }
+        ]
+      }
+    },
+    "R6_snr10": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.021875,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.021875,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.06106374871383524,
+            "max_normalized_regret": 0.2014551611040305
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.04375,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.04375,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.027882992079640845,
+            "max_normalized_regret": 0.048880106381907984
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.04375,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.04375,
+              "a": 1.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0343525442535737,
+            "max_normalized_regret": 0.12583200827158558
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.0875,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0875,
+              "a": 2.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.038793366236054005,
+            "max_normalized_regret": 0.05959392271899944
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.35,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.35,
+              "a": 4.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.04998033205565572,
+            "max_normalized_regret": 0.07606319624338842
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.35,\"c\":1.05}",
+            "parameter": {
+              "alpha": 0.35,
+              "a": 4.0,
+              "c": 1.05
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06919167278185151,
+            "max_normalized_regret": 0.1557679764087201
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.066143783}",
+            "parameter": {
+              "q": 0.066143783
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.0001423049717904079,
+            "max_normalized_regret": 0.0005692198871616316
+          },
+          {
+            "token": "{\"q\":0.013228757}",
+            "parameter": {
+              "q": 0.013228757
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0037623425556195245,
+            "max_normalized_regret": 0.009492010620016478
+          },
+          {
+            "token": "{\"q\":0.046300648}",
+            "parameter": {
+              "q": 0.046300648
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.00039856598755078076,
+            "max_normalized_regret": 0.0014622053585999772
+          },
+          {
+            "token": "{\"q\":0.026457513}",
+            "parameter": {
+              "q": 0.026457513
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.00045775452646451553,
+            "max_normalized_regret": 0.0014370711309907858
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.18731995}",
+            "parameter": {
+              "q": 0.18731995
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 1.466726385518718,
+            "max_normalized_regret": 3.178476404368217
+          },
+          {
+            "token": "{\"q\":0.29435992}",
+            "parameter": {
+              "q": 0.29435992
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.24083994}",
+            "parameter": {
+              "q": 0.24083994
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.2561526929959424,
+            "max_normalized_regret": 0.7158807224411476
+          },
+          {
+            "token": "{\"q\":0.3746399}",
+            "parameter": {
+              "q": 0.3746399
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0055560778,\"q_S\":0.091227249}",
+            "parameter": {
+              "q_L": 0.0055560778,
+              "q_S": 0.091227249
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.08758839776590222,
+            "max_normalized_regret": 0.18929355344695753
+          },
+          {
+            "token": "{\"q_L\":0.02063686,\"q_S\":0.021286358}",
+            "parameter": {
+              "q_L": 0.02063686,
+              "q_S": 0.021286358
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.025232370218548905,
+            "max_normalized_regret": 0.04994029246800147
+          },
+          {
+            "token": "{\"q_L\":0.015874508,\"q_S\":0.030409083}",
+            "parameter": {
+              "q_L": 0.015874508,
+              "q_S": 0.030409083
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.006908784812815316,
+            "max_normalized_regret": 0.02164837474919734
+          },
+          {
+            "token": "{\"q_L\":0.026986663,\"q_S\":0.015204542}",
+            "parameter": {
+              "q_L": 0.026986663,
+              "q_S": 0.015204542
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.17426122768860258,
+            "max_normalized_regret": 0.4473188287263581
+          },
+          {
+            "token": "{\"q_L\":0.0055560778,\"q_S\":0.15204541}",
+            "parameter": {
+              "q_L": 0.0055560778,
+              "q_S": 0.15204541
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.08758839776590222,
+            "max_normalized_regret": 0.18929355344695753
+          },
+          {
+            "token": "{\"q_L\":0.012699606,\"q_S\":0.024327266}",
+            "parameter": {
+              "q_L": 0.012699606,
+              "q_S": 0.024327266
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.009759925571919736,
+            "max_normalized_regret": 0.0254297807287045
+          }
+        ]
+      }
+    },
+    "R6_snr20": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.0065625,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0065625,
+              "a": 8.0,
+              "c": 0.55
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 1.4658332270067358,
+            "max_normalized_regret": 3.4745394361357747
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.013125,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.013125,
+              "a": 8.0,
+              "c": 0.55
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.06130686694471571,
+            "max_normalized_regret": 0.23491184536930398
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.0525,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.0525,
+              "a": 8.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.016303498148132145,
+            "max_normalized_regret": 0.028782846325425826
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.02625,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.02625,
+              "a": 16.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.018161414608504733,
+            "max_normalized_regret": 0.03162808423236929
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.0525,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0525,
+              "a": 16.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.019000390577114612,
+            "max_normalized_regret": 0.03365693418292093
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.02625,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.02625,
+              "a": 4.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0217136720156626,
+            "max_normalized_regret": 0.03477663146900367
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.0066143783}",
+            "parameter": {
+              "q": 0.0066143783
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.14205834664467282,
+            "max_normalized_regret": 0.3174085035521541
+          },
+          {
+            "token": "{\"q\":0.023150324}",
+            "parameter": {
+              "q": 0.023150324
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.0009682699461305289,
+            "max_normalized_regret": 0.0038730797845221154
+          },
+          {
+            "token": "{\"q\":0.013228757}",
+            "parameter": {
+              "q": 0.013228757
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0020177900409633076,
+            "max_normalized_regret": 0.007694438121983449
+          },
+          {
+            "token": "{\"q\":0.033071891}",
+            "parameter": {
+              "q": 0.033071891
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.038847206273407486,
+            "max_normalized_regret": 0.07844698276003537
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.16420905}",
+            "parameter": {
+              "q": 0.16420905
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 7.504113741081017,
+            "max_normalized_regret": 17.51276625766595
+          },
+          {
+            "token": "{\"q\":0.2554363}",
+            "parameter": {
+              "q": 0.2554363
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.20069995}",
+            "parameter": {
+              "q": 0.20069995
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 2.428138303993541,
+            "max_normalized_regret": 9.496448851197734
+          },
+          {
+            "token": "{\"q\":0.3284181}",
+            "parameter": {
+              "q": 0.3284181
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0074081037,\"q_S\":0.011677088}",
+            "parameter": {
+              "q_L": 0.0074081037,
+              "q_S": 0.011677088
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.0715609947800317,
+            "max_normalized_regret": 0.13127503188642686
+          },
+          {
+            "token": "{\"q_L\":0.012038168,\"q_S\":0.010217452}",
+            "parameter": {
+              "q_L": 0.012038168,
+              "q_S": 0.010217452
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.046758144257087964,
+            "max_normalized_regret": 0.1672041935959352
+          },
+          {
+            "token": "{\"q_L\":0.0092601296,\"q_S\":0.01459636}",
+            "parameter": {
+              "q_L": 0.0092601296,
+              "q_S": 0.01459636
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.01697547550423678,
+            "max_normalized_regret": 0.03552040781341037
+          },
+          {
+            "token": "{\"q_L\":0.01574222,\"q_S\":0.0072981799}",
+            "parameter": {
+              "q_L": 0.01574222,
+              "q_S": 0.0072981799
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.4999774838802647,
+            "max_normalized_regret": 1.714853642430263
+          },
+          {
+            "token": "{\"q_L\":0.0055560778,\"q_S\":0.017515632}",
+            "parameter": {
+              "q_L": 0.0055560778,
+              "q_S": 0.017515632
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.274106712725285,
+            "max_normalized_regret": 0.5261781370710101
+          },
+          {
+            "token": "{\"q_L\":0.0037040518,\"q_S\":0.026273448}",
+            "parameter": {
+              "q_L": 0.0037040518,
+              "q_S": 0.026273448
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.8480332398926237,
+            "max_normalized_regret": 1.6738749627960132
+          }
+        ]
+      }
+    },
+    "R6_snr30": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.0175,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.0175,
+              "a": 16.0,
+              "c": 0.35
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 1.2594123858611552,
+            "max_normalized_regret": 2.712714598165426
+          },
+          {
+            "token": "{\"a\":512.0,\"alpha\":0.0175,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0175,
+              "a": 512.0,
+              "c": 0.55
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.0006162272715077854,
+            "max_normalized_regret": 0.0017179987873328084
+          },
+          {
+            "token": "{\"a\":32.0,\"alpha\":0.00875,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.00875,
+              "a": 32.0,
+              "c": 0.8
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.023591809849934697,
+            "max_normalized_regret": 0.08951341225038179
+          },
+          {
+            "token": "{\"a\":256.0,\"alpha\":0.0175,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0175,
+              "a": 256.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0007523557910301126,
+            "max_normalized_regret": 0.001718963007221852
+          },
+          {
+            "token": "{\"a\":128.0,\"alpha\":0.0175,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0175,
+              "a": 128.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.001046121792238841,
+            "max_normalized_regret": 0.0017001607193851687
+          },
+          {
+            "token": "{\"a\":64.0,\"alpha\":0.0175,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0175,
+              "a": 64.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0017739481341452201,
+            "max_normalized_regret": 0.003628203173864586
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.0052915026}",
+            "parameter": {
+              "q": 0.0052915026
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.6364880900812326,
+            "max_normalized_regret": 1.4050243267786309
+          },
+          {
+            "token": "{\"q\":0.013228757}",
+            "parameter": {
+              "q": 0.013228757
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.005896424234949127,
+            "max_normalized_regret": 0.015098155341361608
+          },
+          {
+            "token": "{\"q\":0.0092601296}",
+            "parameter": {
+              "q": 0.0092601296
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.012969888061808599,
+            "max_normalized_regret": 0.04943380337796777
+          },
+          {
+            "token": "{\"q\":0.019843135}",
+            "parameter": {
+              "q": 0.019843135
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.059737323297507416,
+            "max_normalized_regret": 0.10343531516727711
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.13379997}",
+            "parameter": {
+              "q": 0.13379997
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 17.17910322876922,
+            "max_normalized_regret": 43.283769742374815
+          },
+          {
+            "token": "{\"q\":0.2919272}",
+            "parameter": {
+              "q": 0.2919272
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.2189454}",
+            "parameter": {
+              "q": 0.2189454
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 5.974150035920523,
+            "max_normalized_regret": 23.737015059586273
+          },
+          {
+            "token": "{\"q\":0.38923627}",
+            "parameter": {
+              "q": 0.38923627
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0089955545,\"q_S\":0.00364909}",
+            "parameter": {
+              "q_L": 0.0089955545,
+              "q_S": 0.00364909
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.5276117519214527,
+            "max_normalized_regret": 1.7185610994030136
+          },
+          {
+            "token": "{\"q_L\":0.0068789534,\"q_S\":0.005108726}",
+            "parameter": {
+              "q_L": 0.0068789534,
+              "q_S": 0.005108726
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.05102381985318771,
+            "max_normalized_regret": 0.14528797172206542
+          },
+          {
+            "token": "{\"q_L\":0.0052915026,\"q_S\":0.0072981799}",
+            "parameter": {
+              "q_L": 0.0052915026,
+              "q_S": 0.0072981799
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.4111480211686639,
+            "max_normalized_regret": 1.425515800927656
+          },
+          {
+            "token": "{\"q_L\":0.0042332021,\"q_S\":0.005838544}",
+            "parameter": {
+              "q_L": 0.0042332021,
+              "q_S": 0.005838544
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.9278727493224603,
+            "max_normalized_regret": 2.927064354139213
+          },
+          {
+            "token": "{\"q_L\":0.011641306,\"q_S\":0.002554363}",
+            "parameter": {
+              "q_L": 0.011641306,
+              "q_S": 0.002554363
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 1.7007077806924527,
+            "max_normalized_regret": 4.540076547791614
+          },
+          {
+            "token": "{\"q_L\":0.0031749016,\"q_S\":0.0087578159}",
+            "parameter": {
+              "q_L": 0.0031749016,
+              "q_S": 0.0087578159
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 2.044630893108706,
+            "max_normalized_regret": 6.105268541292172
+          }
+        ]
+      }
+    },
+    "R8_snr0": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":1.0,\"alpha\":1.8,\"c\":0.35}",
+            "parameter": {
+              "alpha": 1.8,
+              "a": 1.0,
+              "c": 0.35
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.10255292565060775,
+            "max_normalized_regret": 0.2156829135307794
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.45,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.45,
+              "a": 1.0,
+              "c": 0.55
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.0031468510515910153,
+            "max_normalized_regret": 0.012551201152767089
+          },
+          {
+            "token": "{\"a\":0.5,\"alpha\":0.45,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.45,
+              "a": 0.5,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0514823131787141,
+            "max_normalized_regret": 0.07382741528866044
+          },
+          {
+            "token": "{\"a\":1.0,\"alpha\":0.9,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.9,
+              "a": 1.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06066432695995061,
+            "max_normalized_regret": 0.08422779264070313
+          },
+          {
+            "token": "{\"a\":0.5,\"alpha\":1.8,\"c\":0.35}",
+            "parameter": {
+              "alpha": 1.8,
+              "a": 0.5,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06993591651583747,
+            "max_normalized_regret": 0.09424294781948195
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":1.8,\"c\":0.8}",
+            "parameter": {
+              "alpha": 1.8,
+              "a": 2.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.07752063982683088,
+            "max_normalized_regret": 0.10392352373629854
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.2078461}",
+            "parameter": {
+              "q": 0.2078461
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 4.101129294498129e-05,
+            "max_normalized_regret": 0.00016404517177992517
+          },
+          {
+            "token": "{\"q\":0.13856406}",
+            "parameter": {
+              "q": 0.13856406
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.00044756506344023617,
+            "max_normalized_regret": 0.001331710032158151
+          },
+          {
+            "token": "{\"q\":0.096994845}",
+            "parameter": {
+              "q": 0.096994845
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0004497547575041949,
+            "max_normalized_regret": 0.0013295419756302884
+          },
+          {
+            "token": "{\"q\":0.055425626}",
+            "parameter": {
+              "q": 0.055425626
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0004554727614174414,
+            "max_normalized_regret": 0.001322738763766651
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.13220106}",
+            "parameter": {
+              "q": 0.13220106
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":1.0576085}",
+            "parameter": {
+              "q": 1.0576085
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":1.4101447}",
+            "parameter": {
+              "q": 1.4101447
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.22033511}",
+            "parameter": {
+              "q": 0.22033511
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.003577055700500653,
+            "max_normalized_regret": 0.014308222802002613
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.006218692,\"q_S\":0.17626808}",
+            "parameter": {
+              "q_L": 0.006218692,
+              "q_S": 0.17626808
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.015753276985784992,
+            "max_normalized_regret": 0.04111145769267699
+          },
+          {
+            "token": "{\"q_L\":0.027712813,\"q_S\":0.047004823}",
+            "parameter": {
+              "q_L": 0.027712813,
+              "q_S": 0.047004823
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.006914983720426815,
+            "max_normalized_regret": 0.024833416457307855
+          },
+          {
+            "token": "{\"q_L\":0.034641016,\"q_S\":0.058756028}",
+            "parameter": {
+              "q_L": 0.034641016,
+              "q_S": 0.058756028
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.006889980957055231,
+            "max_normalized_regret": 0.0247630013561162
+          },
+          {
+            "token": "{\"q_L\":0.058889727,\"q_S\":0.029378014}",
+            "parameter": {
+              "q_L": 0.058889727,
+              "q_S": 0.029378014
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.13313074901409916,
+            "max_normalized_regret": 0.20679966785387238
+          },
+          {
+            "token": "{\"q_L\":0.02078461,\"q_S\":0.070507234}",
+            "parameter": {
+              "q_L": 0.02078461,
+              "q_S": 0.070507234
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.007110623895592694,
+            "max_normalized_regret": 0.025186206837389813
+          },
+          {
+            "token": "{\"q_L\":0.013856406,\"q_S\":0.10576085}",
+            "parameter": {
+              "q_L": 0.013856406,
+              "q_S": 0.10576085
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.007956118790772515,
+            "max_normalized_regret": 0.026934193215701674
+          }
+        ]
+      }
+    },
+    "R8_snr10": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.6,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.6,
+              "a": 4.0,
+              "c": 0.8
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.15,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.15,
+              "a": 2.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.003952159396074295,
+            "max_normalized_regret": 0.01078220964446186
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.075,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.075,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.032471616083700194,
+            "max_normalized_regret": 0.07490777622740263
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":1.2,\"c\":0.8}",
+            "parameter": {
+              "alpha": 1.2,
+              "a": 8.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.061897781644784655,
+            "max_normalized_regret": 0.0941702544934826
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":1.2,\"c\":0.55}",
+            "parameter": {
+              "alpha": 1.2,
+              "a": 4.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06294146565557412,
+            "max_normalized_regret": 0.09380865748361211
+          },
+          {
+            "token": "{\"a\":2.0,\"alpha\":0.6,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.6,
+              "a": 2.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.06307922535820254,
+            "max_normalized_regret": 0.09950067985079536
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.060621778}",
+            "parameter": {
+              "q": 0.060621778
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.034641016}",
+            "parameter": {
+              "q": 0.034641016
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.00027697185257069545,
+            "max_normalized_regret": 0.000888690506946288
+          },
+          {
+            "token": "{\"q\":0.017320508}",
+            "parameter": {
+              "q": 0.017320508
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0013330581396008845,
+            "max_normalized_regret": 0.0023506205168273286
+          },
+          {
+            "token": "{\"q\":0.08660254}",
+            "parameter": {
+              "q": 0.08660254
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.018306375695961274,
+            "max_normalized_regret": 0.02789631211018917
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.16157908}",
+            "parameter": {
+              "q": 0.16157908
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.8194088897688572,
+            "max_normalized_regret": 1.522542118803583
+          },
+          {
+            "token": "{\"q\":0.29084234}",
+            "parameter": {
+              "q": 0.29084234
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.22621071}",
+            "parameter": {
+              "q": 0.22621071
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.5047385377131901,
+            "max_normalized_regret": 1.5005279788892274
+          },
+          {
+            "token": "{\"q\":0.35547397}",
+            "parameter": {
+              "q": 0.35547397
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0083138439,\"q_S\":0.066100532}",
+            "parameter": {
+              "q_L": 0.0083138439,
+              "q_S": 0.066100532
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.042513528710075854,
+            "max_normalized_regret": 0.10826720869327278
+          },
+          {
+            "token": "{\"q_L\":0.027019993,\"q_S\":0.025705762}",
+            "parameter": {
+              "q_L": 0.027019993,
+              "q_S": 0.025705762
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.048444646632380906,
+            "max_normalized_regret": 0.09528734978207298
+          },
+          {
+            "token": "{\"q_L\":0.02078461,\"q_S\":0.036722518}",
+            "parameter": {
+              "q_L": 0.02078461,
+              "q_S": 0.036722518
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.015757385696158144,
+            "max_normalized_regret": 0.05870250953249667
+          },
+          {
+            "token": "{\"q_L\":0.035333836,\"q_S\":0.018361259}",
+            "parameter": {
+              "q_L": 0.035333836,
+              "q_S": 0.018361259
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.2152580353483146,
+            "max_normalized_regret": 0.37093052320599273
+          },
+          {
+            "token": "{\"q_L\":0.016627688,\"q_S\":0.029378014}",
+            "parameter": {
+              "q_L": 0.016627688,
+              "q_S": 0.029378014
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.01678762560716135,
+            "max_normalized_regret": 0.06054534287805624
+          },
+          {
+            "token": "{\"q_L\":0.012470766,\"q_S\":0.044067021}",
+            "parameter": {
+              "q_L": 0.012470766,
+              "q_S": 0.044067021
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.021363300605489854,
+            "max_normalized_regret": 0.06834086633943026
+          }
+        ]
+      }
+    },
+    "R8_snr20": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.01125,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.01125,
+              "a": 8.0,
+              "c": 0.55
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.10249558129215047,
+            "max_normalized_regret": 0.1896250077727888
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.0225,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.0225,
+              "a": 8.0,
+              "c": 0.55
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.005651911499992501,
+            "max_normalized_regret": 0.02031380969254193
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.09,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.09,
+              "a": 4.0,
+              "c": 0.8
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.00797125578247343,
+            "max_normalized_regret": 0.020439674399883367
+          },
+          {
+            "token": "{\"a\":4.0,\"alpha\":0.045,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.045,
+              "a": 4.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.014488463695463305,
+            "max_normalized_regret": 0.02743168520219319
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.09,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.09,
+              "a": 8.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.015490464490455436,
+            "max_normalized_regret": 0.027968962102762784
+          },
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.045,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.045,
+              "a": 16.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.019784519327760874,
+            "max_normalized_regret": 0.04228144518214316
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.017320508}",
+            "parameter": {
+              "q": 0.017320508
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.030310889}",
+            "parameter": {
+              "q": 0.030310889
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.020752400362501366,
+            "max_normalized_regret": 0.047451371141008725
+          },
+          {
+            "token": "{\"q\":0.008660254}",
+            "parameter": {
+              "q": 0.008660254
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.04814513560030159,
+            "max_normalized_regret": 0.11636810635607064
+          },
+          {
+            "token": "{\"q\":0.04330127}",
+            "parameter": {
+              "q": 0.04330127
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.09987854611381092,
+            "max_normalized_regret": 0.16338278654559657
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.15423457}",
+            "parameter": {
+              "q": 0.15423457
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 2.2643015698379925,
+            "max_normalized_regret": 6.4929709697020375
+          },
+          {
+            "token": "{\"q\":0.30846915}",
+            "parameter": {
+              "q": 0.30846915
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.1983016}",
+            "parameter": {
+              "q": 0.1983016
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 1.7209403763000093,
+            "max_normalized_regret": 6.284301115461596
+          },
+          {
+            "token": "{\"q\":0.24236862}",
+            "parameter": {
+              "q": 0.24236862
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.14986509743461035,
+            "max_normalized_regret": 0.5994603897384414
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0096994845,\"q_S\":0.014101447}",
+            "parameter": {
+              "q_L": 0.0096994845,
+              "q_S": 0.014101447
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.042659134482241956,
+            "max_normalized_regret": 0.1422023363007794
+          },
+          {
+            "token": "{\"q_L\":0.015761662,\"q_S\":0.012338766}",
+            "parameter": {
+              "q_L": 0.015761662,
+              "q_S": 0.012338766
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.12316989741595186,
+            "max_normalized_regret": 0.25895734459672193
+          },
+          {
+            "token": "{\"q_L\":0.012124356,\"q_S\":0.017626808}",
+            "parameter": {
+              "q_L": 0.012124356,
+              "q_S": 0.017626808
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.02716922694807672,
+            "max_normalized_regret": 0.09514418803825775
+          },
+          {
+            "token": "{\"q_L\":0.020611405,\"q_S\":0.0088134042}",
+            "parameter": {
+              "q_L": 0.020611405,
+              "q_S": 0.0088134042
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.6256351927470827,
+            "max_normalized_regret": 1.235771527873884
+          },
+          {
+            "token": "{\"q_L\":0.0072746134,\"q_S\":0.02115217}",
+            "parameter": {
+              "q_L": 0.0072746134,
+              "q_S": 0.02115217
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.12516563722327045,
+            "max_normalized_regret": 0.3564828375008102
+          },
+          {
+            "token": "{\"q_L\":0.0048497423,\"q_S\":0.031728255}",
+            "parameter": {
+              "q_L": 0.0048497423,
+              "q_S": 0.031728255
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.3846013188392507,
+            "max_normalized_regret": 1.0284092747350972
+          }
+        ]
+      }
+    },
+    "R8_snr30": {
+      "proposed": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"a\":16.0,\"alpha\":0.03,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.03,
+              "a": 16.0,
+              "c": 0.35
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.07567031384605838,
+            "max_normalized_regret": 0.29886495854319417
+          },
+          {
+            "token": "{\"a\":32.0,\"alpha\":0.015,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.015,
+              "a": 32.0,
+              "c": 0.8
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 0.001132941492088091,
+            "max_normalized_regret": 0.0043846794638155995
+          },
+          {
+            "token": "{\"a\":64.0,\"alpha\":0.015,\"c\":0.8}",
+            "parameter": {
+              "alpha": 0.015,
+              "a": 64.0,
+              "c": 0.8
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0009164277055069836,
+            "max_normalized_regret": 0.0032500312353767047
+          },
+          {
+            "token": "{\"a\":32.0,\"alpha\":0.03,\"c\":0.55}",
+            "parameter": {
+              "alpha": 0.03,
+              "a": 32.0,
+              "c": 0.55
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.0045543587075643766,
+            "max_normalized_regret": 0.01204379212733997
+          },
+          {
+            "token": "{\"a\":8.0,\"alpha\":0.06,\"c\":0.35}",
+            "parameter": {
+              "alpha": 0.06,
+              "a": 8.0,
+              "c": 0.35
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.006752647487398733,
+            "max_normalized_regret": 0.023087707299213944
+          },
+          {
+            "token": "{\"a\":32.0,\"alpha\":0.015,\"c\":1.05}",
+            "parameter": {
+              "alpha": 0.015,
+              "a": 32.0,
+              "c": 1.05
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.007346170032051569,
+            "max_normalized_regret": 0.016118892271093532
+          }
+        ]
+      },
+      "soft": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.0069282032}",
+            "parameter": {
+              "q": 0.0069282032
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.17254094641878953,
+            "max_normalized_regret": 0.4940253350069421
+          },
+          {
+            "token": "{\"q\":0.012124356}",
+            "parameter": {
+              "q": 0.012124356
+            },
+            "pilot_wins": 3,
+            "mean_normalized_regret": 0.00555963835981943,
+            "max_normalized_regret": 0.02223855343927772
+          },
+          {
+            "token": "{\"q\":0.017320508}",
+            "parameter": {
+              "q": 0.017320508
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.024483656630048645,
+            "max_normalized_regret": 0.07948507216706191
+          },
+          {
+            "token": "{\"q\":0.025980762}",
+            "parameter": {
+              "q": 0.025980762
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.09415068862160009,
+            "max_normalized_regret": 0.23057432292793156
+          }
+        ]
+      },
+      "hard": {
+        "selected_count": 4,
+        "selected_candidates": [
+          {
+            "token": "{\"q\":0.13220106}",
+            "parameter": {
+              "q": 0.13220106
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 3.650318467012867,
+            "max_normalized_regret": 10.634514760156453
+          },
+          {
+            "token": "{\"q\":0.26440213}",
+            "parameter": {
+              "q": 0.26440213
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          },
+          {
+            "token": "{\"q\":0.2056461}",
+            "parameter": {
+              "q": 0.2056461
+            },
+            "pilot_wins": 2,
+            "mean_normalized_regret": 2.5387562500450005,
+            "max_normalized_regret": 9.50960064042319
+          },
+          {
+            "token": "{\"q\":0.35253617}",
+            "parameter": {
+              "q": 0.35253617
+            },
+            "pilot_wins": 4,
+            "mean_normalized_regret": 0.0,
+            "max_normalized_regret": 0.0
+          }
+        ]
+      },
+      "l_plus_s": {
+        "selected_count": 6,
+        "selected_candidates": [
+          {
+            "token": "{\"q_L\":0.0055425626,\"q_S\":0.0070507234}",
+            "parameter": {
+              "q_L": 0.0055425626,
+              "q_S": 0.0070507234
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.39033995303854957,
+            "max_normalized_regret": 1.3408160419057857
+          },
+          {
+            "token": "{\"q_L\":0.0090066642,\"q_S\":0.006169383}",
+            "parameter": {
+              "q_L": 0.0090066642,
+              "q_S": 0.006169383
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.21163984792445456,
+            "max_normalized_regret": 0.5410000576637879
+          },
+          {
+            "token": "{\"q_L\":0.0069282032,\"q_S\":0.0088134042}",
+            "parameter": {
+              "q_L": 0.0069282032,
+              "q_S": 0.0088134042
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 0.20074984261922596,
+            "max_normalized_regret": 0.7608060810952224
+          },
+          {
+            "token": "{\"q_L\":0.011777945,\"q_S\":0.0044067021}",
+            "parameter": {
+              "q_L": 0.011777945,
+              "q_S": 0.0044067021
+            },
+            "pilot_wins": 1,
+            "mean_normalized_regret": 1.0517891622410662,
+            "max_normalized_regret": 2.6948593837683523
+          },
+          {
+            "token": "{\"q_L\":0.0041569219,\"q_S\":0.010576085}",
+            "parameter": {
+              "q_L": 0.0041569219,
+              "q_S": 0.010576085
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 0.8032669613577703,
+            "max_normalized_regret": 2.4793152044605464
+          },
+          {
+            "token": "{\"q_L\":0.0027712813,\"q_S\":0.015864128}",
+            "parameter": {
+              "q_L": 0.0027712813,
+              "q_S": 0.015864128
+            },
+            "pilot_wins": 0,
+            "mean_normalized_regret": 1.520206347289128,
+            "max_normalized_regret": 4.2256390300785736
+          }
+        ]
+      }
+    }
+  }
+}

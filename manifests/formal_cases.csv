@@ -1,0 +1,21 @@
+slot,case_id,patient_id,view,field_strength_t,relative_file,slice_index,frame_start,frame_count,include,selection_reason,status
+01,fs_0002_1_5T,UNAVAILABLE,LAX,1.5,fs_0002_1_5T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+02,fs_0003_1_5T,UNAVAILABLE,LAX,1.5,fs_0003_1_5T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+03,fs_0005_1_5T,UNAVAILABLE,SAX,1.5,fs_0005_1_5T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+04,fs_0006_1_5T,UNAVAILABLE,SAX,1.5,fs_0006_1_5T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+05,fs_0007_1_5T,UNAVAILABLE,LAX,1.5,fs_0007_1_5T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+06,fs_0008_1_5T,UNAVAILABLE,LAX,1.5,fs_0008_1_5T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+07,fs_0009_1_5T,UNAVAILABLE,SAX,1.5,fs_0009_1_5T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+08,fs_0010_1_5T,UNAVAILABLE,SAX,1.5,fs_0010_1_5T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+09,fs_0011_1_5T,UNAVAILABLE,SAX,1.5,fs_0011_1_5T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+10,fs_0012_3T,UNAVAILABLE,SAX,3.0,fs_0012_3T.h5,5,0,ALL,true,next eligible SAX after pilot; central slice fixed from metadata,frozen_pending_download
+11,fs_0014_3T,UNAVAILABLE,LAX,3.0,fs_0014_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+12,fs_0015_3T,UNAVAILABLE,LAX,3.0,fs_0015_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+13,fs_0017_3T,UNAVAILABLE,LAX,3.0,fs_0017_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+14,fs_0018_3T,UNAVAILABLE,LAX,3.0,fs_0018_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+15,fs_0019_3T,UNAVAILABLE,SAX,3.0,fs_0019_3T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+16,fs_0020_3T,UNAVAILABLE,SAX,3.0,fs_0020_3T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+17,fs_0021_3T,UNAVAILABLE,SAX,3.0,fs_0021_3T.h5,0,0,ALL,true,next eligible SAX after pilot; metadata order only,frozen_pending_download
+18,fs_0022_3T,UNAVAILABLE,LAX,3.0,fs_0022_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+19,fs_0023_3T,UNAVAILABLE,LAX,3.0,fs_0023_3T.h5,0,0,ALL,true,next eligible LAX after pilot; metadata order only,frozen_pending_download
+20,fs_0025_3T,UNAVAILABLE,SAX,3.0,fs_0025_3T.h5,0,0,ALL,true,next eligible SAX required for frozen 10/10 balance,frozen_pending_download

@@ -1,0 +1,63 @@
+{
+  "protocol_version": "2.0-single-image-espirit",
+  "status": "pilot-boundary-checked-formal-grid-frozen",
+  "scope": {
+    "accelerations": [4, 6, 8],
+    "nominal_snr_db": [0, 10, 20, 30],
+    "methods": ["proposed", "soft", "hard", "l_plus_s"]
+  },
+  "preprocessing": {
+    "source": "OCMR fully sampled cardiac cine",
+    "target_virtual_coils": 12,
+    "coil_compression": "global semi-unitary compression before ESPIRiT",
+    "dynamic_policy": "estimate CSM and combine each cardiac frame independently",
+    "espirit_source": "CSMEstimation_tutorial/espirit_csm_wangzi.m",
+    "espirit_kernel": [6, 6],
+    "calibration_readout": "full",
+    "calibration_ky": 24,
+    "calibration_singular_value_threshold": 0.02,
+    "image_eigenvalue_threshold": 0.0,
+    "combination": "sum_c conj(CSM_c) * IFFT2c(k_label_c)",
+    "pocs_readout_iterations": 8,
+    "normalization": "combined complex cine RMS"
+  },
+  "sampling": {
+    "acs_lines": 8,
+    "mask_seed_base": 2026100301,
+    "validation_fraction": 0.15,
+    "validation_seed_base": 2026100302
+  },
+  "noise": {
+    "distribution": "circular complex Gaussian in combined single-image k-space",
+    "sigma_formula": "||s||_2/(sqrt(m)*10^(q/20))",
+    "noise_seed_base": 2026100303,
+    "reuse_standard_draw_across_snr_levels": true
+  },
+  "selection": {
+    "pilot_cases_are_disjoint_from_formal": true,
+    "pilot_pool_is_condition_specific": true,
+    "formal_grid_selection": "separate adaptive grid for every method and every R-by-SNR condition; retain per-case winners, near-best mean normalized validation regret, and a small minimum coverage set",
+    "adaptive_candidate_count": {
+      "minimum": 4,
+      "maximum": 10,
+      "mean_normalized_regret_band": 0.05,
+      "fixed_count": null
+    },
+    "tie_tolerance": {"absolute": 1e-08, "relative": 0.0001},
+    "boundary_expansion": {
+      "policy": "pilot winners touching an observed boundary are expanded one coordinate at a time in the corresponding outward direction",
+      "positive_scale_axes": ["alpha", "a", "q", "q_L", "q_S"],
+      "linear_axes": ["c"],
+      "maximum_rounds": 6,
+      "completed_rounds": 6,
+      "post_expansion_pending_candidates": 0,
+      "formal_candidate_sets_remain_frozen": true
+    },
+    "formal_grid_output": "config/formal_candidates.json"
+  },
+  "optimization": {
+    "relative_iterate_tolerance": 1e-05,
+    "maximum_iterations": 300,
+    "root_tolerance": 1e-09
+  }
+}

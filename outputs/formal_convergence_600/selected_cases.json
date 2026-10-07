@@ -1,0 +1,30 @@
+[
+  {
+    "case": "fs_0011_1_5T",
+    "R": 4,
+    "snr_db": 0.0,
+    "condition_median_proposed_minus_l_plus_s_psnr": 0.5153631256826312,
+    "selected_case_proposed_minus_l_plus_s_psnr": 0.33963246860774987
+  },
+  {
+    "case": "fs_0012_3T",
+    "R": 4,
+    "snr_db": 30.0,
+    "condition_median_proposed_minus_l_plus_s_psnr": 0.6772771742410875,
+    "selected_case_proposed_minus_l_plus_s_psnr": 0.6532924369667086
+  },
+  {
+    "case": "fs_0011_1_5T",
+    "R": 8,
+    "snr_db": 0.0,
+    "condition_median_proposed_minus_l_plus_s_psnr": 0.3355545960251938,
+    "selected_case_proposed_minus_l_plus_s_psnr": 0.36494364732383033
+  },
+  {
+    "case": "fs_0010_1_5T",
+    "R": 8,
+    "snr_db": 30.0,
+    "condition_median_proposed_minus_l_plus_s_psnr": 1.8352681910574553,
+    "selected_case_proposed_minus_l_plus_s_psnr": 1.9084120654156536
+  }
+]

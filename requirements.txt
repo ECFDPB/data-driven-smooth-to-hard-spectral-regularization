@@ -1,0 +1,9 @@
+numpy
+scipy
+h5py
+ismrmrd
+scikit-image
+matplotlib
+pillow
+reportlab
+cupy-cuda12x

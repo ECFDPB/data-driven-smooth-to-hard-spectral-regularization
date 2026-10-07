@@ -1,0 +1,5 @@
+case_id,patient_id,view,field_strength_t,relative_file,slice_index,include
+fs_0001_1_5T,UNAVAILABLE,LAX,1.5,fs_0001_1_5T.h5,0,true
+fs_0004_1_5T,UNAVAILABLE,SAX,1.5,fs_0004_1_5T.h5,0,true
+fs_0013_3T,UNAVAILABLE,LAX,3.0,fs_0013_3T.h5,0,true
+fs_0016_3T,UNAVAILABLE,SAX,3.0,fs_0016_3T.h5,0,true
