@@ -20,15 +20,11 @@ data/
 *.hdf5
 *.mat
 
-# Large or reproducible experiment artefacts
-outputs/**/reconstructions/
-outputs/**/candidate_results.jsonl
-outputs/pilot_boundary_round*/
-outputs/pilot/*.json
-outputs/pilot/*.jsonl
-outputs/pilot/*.png
-outputs/formal/paper_summary/*.png
-outputs/formal/paper_summary/fig5_full_metric_heatmap.pdf
+# Keep only the single formal result record committed to Git
+outputs/*
+!outputs/formal/
+outputs/formal/*
+!outputs/formal/final_results.jsonl
 
 # Logs and operating-system files
 *.log

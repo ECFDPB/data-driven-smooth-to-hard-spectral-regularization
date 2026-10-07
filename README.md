@@ -1,6 +1,6 @@
 # Single-image dynamic MRI evaluation
 
-Reproducible code and compact result artefacts for a retrospective dynamic cardiac MRI comparison of the proposed method, Soft, Hard, and L+S. The repository contains the frame-wise ESPIRiT preprocessing pipeline, condition-specific parameter selection, reconstruction solvers, formal evaluation scripts, smoke tests, frozen experimental settings, and the final paper tables and figures.
+Reproducible code for a retrospective dynamic cardiac MRI comparison of the proposed method, Soft, Hard, and L+S. The repository contains the frame-wise ESPIRiT preprocessing pipeline, condition-specific parameter selection, reconstruction solvers, formal evaluation scripts, frozen experimental settings, and one formal result file.
 
 ## Experimental protocol
 
@@ -21,12 +21,11 @@ config/                 Frozen protocol and formal candidate grids
 manifests/              Disjoint pilot and formal case lists
 src/single_image_eval/  Fourier operators, sampling, noise, metrics, and solvers
 scripts/                Preprocessing, selection, evaluation, and figure scripts
-tests/                  Dependency-light numerical smoke tests
 vendor/ocmr/            OCMR ISMRMRD reader used by preprocessing
-outputs/                Compact final results, diagnostics, tables, and PDF figures
+outputs/formal/         One newline-delimited JSON result file
 ```
 
-Raw OCMR `.h5` files, processed arrays, reconstructed volumes, local environments, caches, and full candidate-search logs are intentionally excluded. This keeps the repository small and avoids redistributing the source dataset.
+Raw OCMR `.h5` files, processed arrays, reconstructed volumes, local environments, caches, candidate-search logs, smoke tests, derived tables, and paper figures are intentionally excluded. This keeps the repository focused on the minimum code and data needed to inspect the method and its reported numerical results.
 
 ## Setup
 
@@ -74,18 +73,8 @@ python scripts/generate_convergence_sensitivity_figure.py
 
 Use `--help` on any script for available paths and backend options. Long evaluations are resumable because completed records are retained in JSONL outputs.
 
-## Quick checks
-
-```bash
-python tests/smoke_test.py
-python tests/solver_smoke_test.py
-```
-
 ## Included results
 
-- `outputs/formal/final_results.jsonl`: final per-case, per-condition records.
-- `outputs/formal/paper_summary/`: paper-ready aggregate tables, paired statistics, Chapter 9 text, and PDF figures.
-- `outputs/formal_convergence_600*/`: selected 300-versus-600-iteration sensitivity checks.
-- `outputs/pilot/boundary_summary/`: parameter-grid boundary audit summaries.
+- `outputs/formal/final_results.jsonl`: the only committed output; it contains the final per-case, per-condition records as newline-delimited JSON.
 
 No software license is granted by this repository unless a license file is added later. The vendored OCMR reader retains its original attribution in the source file.

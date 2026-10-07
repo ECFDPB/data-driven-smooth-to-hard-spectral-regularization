@@ -1,5 +1,0 @@
-method,pilot_case_condition_combinations,combinations_improved_vs_initial_grid,maximum_relative_validation_loss_reduction_percent,outward_parameter_settings_tested,pilot_reconstructions,final_outward_settings_pending
-proposed,48,12,4.183322803000432,57,228,0
-soft,48,3,0.3765582289248874,6,24,0
-hard,48,2,96.43288143727679,13,52,0
-l_plus_s,48,3,0.2780922855752375,21,84,0
