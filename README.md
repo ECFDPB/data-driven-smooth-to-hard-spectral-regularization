@@ -1,35 +1,45 @@
-# Single-image dynamic MRI evaluation
+# Single-Image Dynamic MRI Reconstruction
 
-Reproducible code for a retrospective dynamic cardiac MRI comparison of the proposed method, Soft, Hard, and L+S. The repository contains the frame-wise ESPIRiT preprocessing pipeline, condition-specific parameter selection, reconstruction solvers, formal evaluation scripts, frozen experimental settings, and one formal result file.
+Code repository for the numerical experiments comparing the proposed method with Soft, Hard, and L+S reconstruction on retrospectively undersampled OCMR cardiac cine data.
 
-## Experimental protocol
-
-- Data source: fully sampled OCMR cardiac cine acquisitions.
-- Coil processing: optional global semi-unitary compression to 12 virtual coils, followed by frame-wise ESPIRiT sensitivity estimation with a 6 x 6 kernel and 24 calibration lines.
-- Single-image construction: `sum(conj(CSM) * IFFT2c(k-space), coil)`, followed by complex-cine RMS normalization.
-- Retrospective sampling: Cartesian masks with 8 autocalibration lines at acceleration factors R = 4, 6, and 8.
-- Noise: circular complex Gaussian noise in the sampled single-image k-space at nominal SNR q = 0, 10, 20, and 30 dB. Larger q means less added noise.
-- Evaluation: PSNR and SSIM on magnitude images and NMSE on complex-valued reconstructions.
-- Optimisation: at most 300 iterations with relative iterate tolerance 1e-5. A selected diagnostic subset was also run to 600 iterations.
-
-The complete machine-readable protocol, seeds, stopping rules, and selection policy are recorded in [`config/protocol.json`](config/protocol.json). The formal, condition-specific candidate grids are frozen in [`config/formal_candidates.json`](config/formal_candidates.json).
-
-## Repository layout
+## Repository Structure
 
 ```text
-config/                 Frozen protocol and formal candidate grids
-manifests/              Disjoint pilot and formal case lists
-src/single_image_eval/  Fourier operators, sampling, noise, metrics, and solvers
-scripts/                Preprocessing, selection, evaluation, and figure scripts
-vendor/ocmr/            OCMR ISMRMRD reader used by preprocessing
-outputs/formal/         One newline-delimited JSON result file
+├── src/single_image_eval/        # Reconstruction library
+│   ├── candidates.py             # Condition-specific parameter grids
+│   ├── espirit.py                # ESPIRiT sensitivity estimation and coil combination
+│   ├── fft.py                    # Centred two-dimensional Fourier transforms
+│   ├── metrics.py                # PSNR, SSIM, and NMSE
+│   ├── noise.py                  # Complex Gaussian noise at a nominal SNR
+│   ├── operator.py               # Subsampled Fourier forward and adjoint operators
+│   ├── preprocess.py             # Coil compression and OCMR preprocessing
+│   ├── sampling.py               # Cartesian masks and validation splits
+│   ├── solvers.py                # Proposed, Soft, Hard, and L+S solvers
+│   └── spectral.py               # Spectral proximal computations
+├── scripts/
+│   ├── preprocess_combined.py    # Convert multi-coil OCMR data to combined cine images
+│   ├── run_evaluation.py         # Run pilot or formal reconstruction experiments
+│   └── select_condition_grids.py # Freeze condition-specific formal parameter grids
+├── config/
+│   ├── protocol.json             # Experimental settings and deterministic seeds
+│   └── formal_candidates.json    # Frozen parameter candidates for every method and condition
+├── manifests/
+│   ├── pilot_cases.csv           # Four pilot cases used for parameter selection
+│   └── formal_cases.csv          # Twenty held-out formal cases
+├── vendor/ocmr/read_ocmr.py      # OCMR ISMRMRD reader
+└── outputs/formal/
+    └── final_results.jsonl       # Final per-case reconstruction results
 ```
 
-Raw OCMR `.h5` files, processed arrays, reconstructed volumes, local environments, caches, candidate-search logs, smoke tests, derived tables, and paper figures are intentionally excluded. This keeps the repository focused on the minimum code and data needed to inspect the method and its reported numerical results.
+Raw OCMR files, processed arrays, reconstructed volumes, candidate-search logs, figures, tables, and local runtime files are not included.
 
-## Setup
+## Requirements
 
-Python 3.10 or newer is recommended. Create an isolated environment and install the dependencies:
+- Python 3.10+
+- NumPy, SciPy, h5py, ISMRMRD, and scikit-image
+- CuPy with CUDA 12 for optional GPU execution
+
+Install the dependencies in an isolated environment:
 
 ```bash
 python -m venv .venv
@@ -37,44 +47,78 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-`cupy-cuda12x` enables GPU execution and requires a compatible NVIDIA driver. For a CPU-only environment, omit that package and run the scripts with the NumPy backend.
+For CPU-only execution, omit `cupy-cuda12x` and select the NumPy backend.
 
-Place the required OCMR files listed in `manifests/pilot_cases.csv` and `manifests/formal_cases.csv` under:
+## Data Preparation
+
+Download the OCMR cases listed in `manifests/pilot_cases.csv` and `manifests/formal_cases.csv`, then place the `.h5` files under:
 
 ```text
 data/raw/ocmr/
 ```
 
-## Reproduce the evaluation
+The preprocessing follows the same procedure for every cardiac frame:
 
-Run commands from the repository root. First preprocess the disjoint pilot and formal cohorts:
+1. compress to 12 virtual coils when necessary;
+2. estimate ESPIRiT coil-sensitivity maps using a 6 x 6 kernel and 24 calibration lines;
+3. combine the coil images as `sum(conj(CSM) * IFFT2c(k-space), coil)`;
+4. normalize the resulting complex cine by its RMS amplitude.
+
+Run preprocessing with:
 
 ```bash
 python scripts/preprocess_combined.py --cohort pilot
 python scripts/preprocess_combined.py --cohort formal
 ```
 
-To repeat parameter selection from the pilot cohort:
+Use `--backend numpy` for CPU execution or `--backend cupy` for GPU execution.
+
+## Running the Experiments
+
+### Pilot Parameter Selection
 
 ```bash
 python scripts/run_evaluation.py --stage pilot
 python scripts/select_condition_grids.py
 ```
 
-The committed `config/formal_candidates.json` is the frozen grid used for the reported formal experiment. Run the formal evaluation and regenerate summaries with:
+The second command writes the condition-specific candidate sets to `config/formal_candidates.json`. The committed file is the frozen grid used for the reported formal experiment.
+
+### Formal Reconstruction
+
+Inspect the planned number of candidate fits before running:
+
+```bash
+python scripts/run_evaluation.py --stage formal --dry-run
+```
+
+Run the complete formal experiment:
 
 ```bash
 python scripts/run_evaluation.py --stage formal
-python scripts/summarize_formal_results.py
-python scripts/generate_psnr_distribution_unified.py
-python scripts/generate_secondary_metric_intervals.py
-python scripts/generate_convergence_sensitivity_figure.py
 ```
 
-Use `--help` on any script for available paths and backend options. Long evaluations are resumable because completed records are retained in JSONL outputs.
+The runner is resumable. Candidate records are written during execution, while the selected parameters and final reconstruction metrics are recorded in `outputs/formal/final_results.jsonl`.
 
-## Included results
+## Experimental Protocol
 
-- `outputs/formal/final_results.jsonl`: the only committed output; it contains the final per-case, per-condition records as newline-delimited JSON.
+- Acceleration factors: R = 4, 6, and 8
+- Nominal SNR values: q = 0, 10, 20, and 30 dB; larger q means less added noise
+- Autocalibration region: 8 phase-encoding lines
+- Validation fraction: 15% of the acquired non-ACS samples
+- Maximum iterations: 300
+- Relative iterate tolerance: 1e-5
+- Compared methods: Proposed, Soft, Hard, and L+S
+- Metrics: magnitude PSNR, magnitude SSIM, and complex NMSE
 
-No software license is granted by this repository unless a license file is added later. The vendored OCMR reader retains its original attribution in the source file.
+All masks, validation splits, and complex-noise realizations use deterministic seeds recorded in `config/protocol.json`.
+
+## Reproducibility
+
+The four pilot cases are disjoint from the twenty formal cases. Parameter candidates are selected separately for every method and every R-by-SNR condition using pilot validation data only. The formal cases are evaluated with the frozen grids in `config/formal_candidates.json`; formal test metrics do not alter the grids.
+
+The single committed result file, `outputs/formal/final_results.jsonl`, contains 960 records: 20 formal cases x 3 acceleration factors x 4 nominal SNR levels x 4 methods.
+
+## Citation
+
+Citation information will be added with the accompanying manuscript.
