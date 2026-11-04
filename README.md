@@ -1,6 +1,8 @@
-# Single-Image Dynamic MRI Reconstruction
+# Data-driven Smooth-to-hard Spectral Regularization for General Linear Inverse Problems
 
-Code repository for the numerical experiments comparing the proposed method with Soft, Hard, and L+S reconstruction on retrospectively undersampled OCMR cardiac cine data.
+Numerical evaluation code accompanying the paper [Data-driven Smooth-to-hard Spectral Regularization for General Linear Inverse Problems](https://arxiv.org/abs/2610.21664) by **Guanzhong Yang, Zi Wang, and Guang Yang**.
+
+This repository contains the single-image MRI experiments comparing the proposed smooth-to-hard spectral regularization method with Soft, Hard, and L+S reconstruction on retrospectively undersampled OCMR cardiac cine data.
 
 ## Repository Structure
 
@@ -42,6 +44,8 @@ Raw OCMR files, processed arrays, reconstructed volumes, candidate-search logs, 
 Install the dependencies in an isolated environment:
 
 ```bash
+git clone https://github.com/ECFDPB/data-driven-smooth-to-hard-spectral-regularization.git
+cd data-driven-smooth-to-hard-spectral-regularization
 python -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
@@ -121,4 +125,19 @@ The single committed result file, `outputs/formal/final_results.jsonl`, contains
 
 ## Citation
 
-Citation information will be added with the accompanying manuscript.
+If you use this code or the accompanying method, please cite:
+
+Guanzhong Yang, Zi Wang, and Guang Yang. *Data-driven Smooth-to-hard Spectral Regularization for General Linear Inverse Problems*. arXiv:2610.21664, 2026. [Paper](https://arxiv.org/abs/2610.21664) | [DOI](https://doi.org/10.48550/arXiv.2610.21664).
+
+```bibtex
+@misc{yang2026datadrivensmoothtohardspectral,
+  title         = {Data-driven Smooth-to-hard Spectral Regularization for General Linear Inverse Problems},
+  author        = {Guanzhong Yang and Zi Wang and Guang Yang},
+  year          = {2026},
+  eprint        = {2610.21664},
+  archivePrefix = {arXiv},
+  primaryClass  = {math.OC},
+  doi           = {10.48550/arXiv.2610.21664},
+  url           = {https://arxiv.org/abs/2610.21664}
+}
+```
